@@ -5,30 +5,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="{{asset('assets/img/educator-fabicon-300x300.png')}}">
+    <link rel="icon" type="image/png" href="{{secure_asset('assets/img/educator-fabicon-300x300.png')}}">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('assets/vendors/bootstrap/css/bootstrap.min.css')}}" media="all">
+    <link rel="stylesheet" href="{{secure_asset('assets/vendors/bootstrap/css/bootstrap.min.css')}}" media="all">
     <!-- Fonts Awesome CSS -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/fontawesome/css/all.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/vendors/fontawesome/css/all.min.css')}}">
     <!-- Elmentkit Icon CSS -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/elementskit-icon-pack/assets/css/ekiticons.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/vendors/elementskit-icon-pack/assets/css/ekiticons.css')}}">
     <!-- progress bar CSS -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/progressbar-fill-visible/css/progressBar.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/vendors/progressbar-fill-visible/css/progressBar.css')}}">
     <!-- jquery-ui css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/jquery-ui/jquery-ui.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/vendors/jquery-ui/jquery-ui.min.css')}}">
     <!-- modal video css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/modal-video/modal-video.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/vendors/modal-video/modal-video.min.css')}}">
     <!-- light box css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/fancybox/dist/jquery.fancybox.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/vendors/fancybox/dist/jquery.fancybox.min.css')}}">
     <!-- slick slider css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/slick/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/slick/slick-theme.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/vendors/slick/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/vendors/slick/slick-theme.css')}}">
     <!-- Google Font -->
     <link
         href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
         rel="stylesheet">
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('style.css')}}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Study Tracer - BKK SMENDA</title>
 </head>
@@ -36,7 +36,7 @@
 <body class="home">
     <div id="siteLoader" class="site-loader ">
         <div class="preloader-content">
-            <img src="{{asset('assets/img/loader1.gif')}}" alt="">
+            <img src="{{secure_asset('assets/img/loader1.gif')}}" alt="">
         </div>
     </div>
     <div id="page" class="full-page">
@@ -93,7 +93,7 @@
                         <div class="site-identity col-lg-3">
                             <p class="">
                                 <a href="index-2.html">
-                                    <img width="50" src="{{asset('assets/img/logo.png')}}" alt="logo">
+                                    <img width="50" src="{{secure_asset('assets/img/logo.png')}}" alt="logo">
                                 </a>
                             </p>
                         </div>
@@ -135,7 +135,7 @@
                         <div class=" banner-right col-md-6">
                             <figure class="banner-img">
                                 <div class="image-overlay-oval pattern-overlay"></div>
-                                <img src="{{asset('assets/img/educator-img33.png')}}" alt="">
+                                <img src="{{secure_asset('assets/img/educator-img33.png')}}" alt="">
                             </figure>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                         <div class="title-divider"></div>
                         <h2 class="about-title text-center mb-3">Apa itu Tracer Study?</h2>
                         <figure class="figure-round-border mb-3">
-                            <img style="height: 400px; object-fit: cover;" src="{{asset('assets/img/detail-banner.webp')}}"
+                            <img style="height: 400px; object-fit: cover;" src="{{secure_asset('assets/img/detail-banner.webp')}}"
                                 alt="Detail Banner">
                         </figure>
 
@@ -205,7 +205,7 @@
                             <div class="inner-goal-image">
                                 <figure class="video-play-image">
                                     <img style="width: 100%; height: 300px; object-fit: cover;"
-                                        src="{{asset('assets/img/bg_youtube.webp')}}" alt="Background Youtube">
+                                        src="{{secure_asset('assets/img/bg_youtube.webp')}}" alt="Background Youtube">
                                 </figure>
                             </div>
                         </div>
@@ -304,19 +304,19 @@
         </a>
     </div>
     <!-- JavaScript -->
-    <script src="{{asset('assets/vendors/jquery/jquery.js')}}"></script>
-    <script src="{{asset('assets/vendors/waypoint/jquery.waypoints.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/jquery-ui/jquery-ui.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/progressbar-fill-visible/js/progressBar.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/countdown-date-loop-counter/loopcounter.js')}}"></script>
-    <script src="{{asset('assets/vendors/counterup/jquery.counterup.js')}}"></script>
-    <script src="{{asset('assets/vendors/modal-video/jquery-modal-video.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/masonry/masonry.pkgd.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/fancybox/dist/jquery.fancybox.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/slick/slick.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/slick-nav/jquery.slicknav.js')}}"></script>
-    <script src="{{asset('assets/js/custom.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/jquery/jquery.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/waypoint/jquery.waypoints.min.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/jquery-ui/jquery-ui.min.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/progressbar-fill-visible/js/progressBar.min.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/countdown-date-loop-counter/loopcounter.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/counterup/jquery.counterup.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/modal-video/jquery-modal-video.min.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/masonry/masonry.pkgd.min.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/fancybox/dist/jquery.fancybox.min.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/slick/slick.min.js')}}"></script>
+    <script src="{{secure_asset('assets/vendors/slick-nav/jquery.slicknav.js')}}"></script>
+    <script src="{{secure_asset('assets/js/custom.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -438,7 +438,7 @@
                                 <div class="author-content">
                                     <div>
                                         <figure class="author-img">
-                                            <img src="{{asset('assets/img/profil_${item.jenis_kelamin}.svg')}}" alt="">
+                                            <img src="{{secure_asset('assets/img/profil_${item.jenis_kelamin}.svg')}}" alt="">
                                         </figure>
                                     </div>
                                     <div class="author-info">
