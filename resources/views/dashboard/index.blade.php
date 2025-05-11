@@ -7,7 +7,10 @@
             <div class="card-body">
                 <h4 class="mt-0 header-title">Data Alumni</h4>
 
-                <a href="{{ route('alumni.create') }}" class="btn btn-primary mb-3">Tambah Alumni</a>
+                <div class="d-flex mb-3">
+                    <a href="{{ route('alumni.create') }}" class="btn btn-primary w-100 me-3">Tambah Alumni</a>
+                <a href="#" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#shareModal">Bagikan Kuesioner</a>
+                </div>
                 <div class="table-responsive my-4">
                     <table class="table table-hover mb-0">
                         <thead>

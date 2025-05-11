@@ -3,16 +3,24 @@
 use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
+use App\Models\Perusahaan;
+use App\Models\Universitas;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [LandingPageController::class, 'index']);
+Route::get('/', [LandingPageController::class, 'index'])->name('index');
 
 Route::middleware('auth')->get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::middleware('auth')->resource('alumni', AlumniController::class)->parameters([
+Route::resource('alumni', AlumniController::class)->parameters([
     'alumni' => 'alumni' // This tells Laravel to use 'alumni' as parameter name
 ]);;
+
+Route::get('kuesioner', function(){
+        $universitasList = Universitas::all();
+        $perusahaanList = Perusahaan::all();
+        return view('kuesioner', compact('universitasList', 'perusahaanList'));
+})->name('kuesioner');
 
 // Route::get('export', function () {
 //     $filePath = public_path('tracer-study.xlsx');

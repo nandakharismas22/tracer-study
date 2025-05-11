@@ -2,6 +2,50 @@
 
 <body data-layout="horizontal" data-layout-size="boxed">
 
+    <!-- Share Modal -->
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="shareModalLabel">Bagikan Kuesioner</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bagikan link kuesioner berikut ke alumni:</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="kuesionerUrl" value="{{ route('kuesioner') }}"
+                            readonly>
+                        <button class="btn btn-outline-secondary" type="button" onclick="copyToClipboard()">
+                            <i class="fas fa-copy"></i> Salin
+                        </button>
+                    </div>
+
+                    <h5>Bagikan melalui:</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary" onclick="shareTo('facebook')">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </button>
+                        <button class="btn btn-info" onclick="shareTo('twitter')">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </button>
+                        <button class="btn btn-success" onclick="shareTo('whatsapp')">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </button>
+                        <button class="btn btn-primary" onclick="shareTo('telegram')">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </button>
+                        <button class="btn btn-secondary" onclick="shareTo('email')">
+                            <i class="fas fa-envelope"></i> Email
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Loader -->
     <div id="preloader">
         <div id="status">

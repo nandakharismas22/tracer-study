@@ -11,9 +11,11 @@
     <!-- Fonts Awesome CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/fontawesome/css/all.min.css')}}">
     <!-- Elmentkit Icon CSS -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/elementskit-icon-pack/assets/css/ekiticons.css')}}">
+    <link rel="stylesheet" type="text/css"
+        href="{{asset('assets/vendors/elementskit-icon-pack/assets/css/ekiticons.css')}}">
     <!-- progress bar CSS -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/progressbar-fill-visible/css/progressBar.css')}}">
+    <link rel="stylesheet" type="text/css"
+        href="{{asset('assets/vendors/progressbar-fill-visible/css/progressBar.css')}}">
     <!-- jquery-ui css -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/jquery-ui/jquery-ui.min.css')}}">
     <!-- modal video css -->
@@ -149,8 +151,8 @@
                         <div class="title-divider"></div>
                         <h2 class="about-title text-center mb-3">Apa itu Tracer Study?</h2>
                         <figure class="figure-round-border mb-3">
-                            <img style="height: 400px; object-fit: cover;" src="{{asset('assets/img/detail-banner.webp')}}"
-                                alt="Detail Banner">
+                            <img style="height: 400px; object-fit: cover;"
+                                src="{{asset('assets/img/detail-banner.webp')}}" alt="Detail Banner">
                         </figure>
 
                         <div class="about-desc">
@@ -467,6 +469,28 @@
         integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
         data-cf-beacon='{"rayId":"936332056938ce02","version":"2025.4.0-1-g37f21b1","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"2aaac9563824454ba89abdea91540009","b":1}'
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        @if(Session::has('alertType'))
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 5000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        Toast.fire({
+            icon: '{{ Session::get("alertType") }}',
+            title: '{{ Session::get("alertMessage") }}'
+        });
+        @endif
+
+    </script>
 </body>
 
 </html>

@@ -6,6 +6,8 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="mt-0 header-title">Profil Alumni</h4>
+
+                <a href="#" class="btn btn-success w-100 my-3" data-bs-toggle="modal" data-bs-target="#shareModal">Bagikan Kuesioner</a>
                 
                 <div class="row">
                     <div class="col-md-6">

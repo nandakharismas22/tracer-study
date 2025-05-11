@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Universitas;
 use App\Models\Perusahaan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 
@@ -20,7 +21,8 @@ class AlumniController extends Controller
     }
 
     public function store(Request $request)
-    {
+{
+    try {
         $request->validate([
             'username' => 'required|unique:pengguna,username',
             'password' => 'required|min:6',
@@ -45,13 +47,15 @@ class AlumniController extends Controller
             'jenis_kelamin' => $request->jenis_kelamin,
         ]);
 
-
         // Attach universitas if any
         if ($request->has('universitas')) {
             $universitasData = [];
-            foreach ($request->universitas as $univId) {
-                if($univId){
-                    $universitasData[$univId] = ['jurusan' => $request->input("jurusan_$univId"), 'linear' => $request->input("linear_univ_$univId", 0)];
+            foreach ($request->universitas as $index => $univId) {
+                if ($univId) {
+                    $universitasData[$univId] = [
+                        'jurusan' => $request->jurusan[$index] ?? null,
+                        'linear' => $request->linear_univ[$index] ?? 0
+                    ];
                 }
             }
             $alumni->universitas()->attach($universitasData);
@@ -60,16 +64,36 @@ class AlumniController extends Controller
         // Attach perusahaan if any
         if ($request->has('perusahaan')) {
             $perusahaanData = [];
-            foreach ($request->perusahaan as $perusahaanId) {
-                if($perusahaanId){
-                    $perusahaanData[$perusahaanId] = ['wirausaha' => $request->input("wirausaha_$perusahaanId", 0), 'linear' => $request->input("linear_perusahaan_$perusahaanId", 0)];
+            foreach ($request->perusahaan as $index => $perusahaanId) {
+                if ($perusahaanId) {
+                    $perusahaanData[$perusahaanId] = [
+                        'wirausaha' => $request->wirausaha[$index] ?? 0,
+                        'linear' => $request->linear_perusahaan[$index] ?? 0
+                    ];
                 }
             }
             $alumni->perusahaan()->attach($perusahaanData);
         }
 
-        return redirect()->route('dashboard')->with('success', 'Alumni created successfully');
+        if (Auth::user()) {
+            return redirect()->route('dashboard')->with([
+                'alertType' => 'success',
+                'alertMessage' => 'Data alumni berhasil disimpan!'
+            ]);
+        }
+
+        return redirect()->route('index')->with([
+            'alertType' => 'success',
+            'alertMessage' => 'Terima kasih telah mengisi kuesioner alumni!'
+        ]);
+
+    } catch (\Exception $e) {
+        return redirect()->back()->withInput()->with([
+            'alertType' => 'error',
+            'alertMessage' => 'Gagal menyimpan data: ' . $e->getMessage()
+        ]);
     }
+}
 
     public function show(Alumni $alumni)
     {

@@ -18,17 +18,12 @@
                     </div>
                     @endif
 
+                    <input type="hidden" class="form-control" id="password" name="password" value="smenda123">
+
                     <div class="form-group mb-3">
                         <label for="username">Username/NISN</label>
                         <input type="text" class="form-control" id="username" name="username" value="{{ old('username') }}" required>
                         @error('username')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                        @error('password')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
