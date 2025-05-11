@@ -21,11 +21,12 @@ class Alumni extends Model
     }
 
     public function universitas(){
-        return $this->belongsToMany(Universitas::class, 'alumni_universitas');
+        return $this->belongsToMany(Universitas::class, 'alumni_universitas')
+        ->withPivot('jurusan', 'linear');
     }
 
     public function perusahaan(){
         return $this->belongsToMany(Perusahaan::class, 'alumni_perusahaan')
-        ->withPivot('wirausaha');
+        ->withPivot('wirausaha', 'linear');
     }
 }
