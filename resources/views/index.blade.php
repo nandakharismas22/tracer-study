@@ -51,14 +51,14 @@
                             <div class="header-contact-info">
                                 <ul>
                                     <li>
-                                        <a href="tel:+62318964034"><i class="fas fa-phone-alt"></i> (031) 8964034</a>
+                                        <a href="tel:+62318964034"><i class="fas text-light fa-phone-alt"></i> (031) 8964034</a>
                                     </li>
                                     <li>
-                                        <a href="mailto:info@smkn2buduran.sch.id"><i class="fas fa-envelope"></i> <span
+                                        <a href="mailto:info@smkn2buduran.sch.id"><i class="fas text-light fa-envelope"></i> <span
                                                 class="__cf_email__">info@smkn2buduran.sch.id</span></a>
                                     </li>
                                     <li>
-                                        <i class="fas fa-map-marker-alt"></i> Jl. Jenggolo No.2A Siwalanpanji Kec.
+                                        <i class="fas text-light fa-map-marker-alt"></i> Jl. Jenggolo No.2A Siwalanpanji Kec.
                                         Buduran
                                     </li>
                                 </ul>
@@ -70,17 +70,17 @@
                                     <li>
                                         <a href="https://www.facebook.com/groups/1339789936528467/?locale=en_GB"
                                             target="_blank">
-                                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                                            <i class="fab text-light fa-facebook" aria-hidden="true"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.youtube.com/@bkksmkn2buduran195" target="_blank">
-                                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                                            <i class="fab text-light fa-youtube" aria-hidden="true"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/bkksmenda/" target="_blank">
-                                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                                            <i class="fab text-light fa-instagram" aria-hidden="true"></i>
                                         </a>
                                     </li>
                                 </ul>

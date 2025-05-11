@@ -116,7 +116,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary">Simpan</button>
-                    <a href="{{ route('alumni.index') }}" class="btn btn-secondary">Kembali</a>
+                    <a href="{{ route('dashboard') }}" class="btn btn-secondary">Kembali</a>
                 </form>
             </div>
         </div>
