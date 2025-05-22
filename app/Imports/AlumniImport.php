@@ -30,27 +30,21 @@ class AlumniImport implements ToCollection
                 $pengguna = User::where('username', $nisn)
                 ->first();
 
-                if($pengguna && $linear){
+
+                if($pengguna && $linear == null){
                     $alumni = Alumni::where('pengguna_uuid', $pengguna->uuid)
                     ->first();
 
-                    $check = Alumni::where('uuid', $alumni->uuid)
-                    ->whereHas('universitas')
-                    ->first();
-
-                    if($check){
                         DB::table('alumni_universitas')
                         ->where('alumni_uuid', $alumni->uuid)
                         ->update([
-                            'linear' => 1
+                            'linear' => 0
                         ]);
-                    } else {
                         DB::table('alumni_perusahaan')
                         ->where('alumni_uuid', $alumni->uuid)
                         ->update([
-                            'linear' => 1
+                            'linear' => 0
                         ]);
-                    }
                 } 
             }
         // foreach ($rows as $index => $row) {

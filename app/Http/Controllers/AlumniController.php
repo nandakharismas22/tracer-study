@@ -171,4 +171,24 @@ class AlumniController extends Controller
 
         return redirect()->route('dashboard')->with('success', 'Alumni deleted successfully');
     }
+
+    public function approve(Alumni $alumni)
+{
+    $alumni->update(['status' => 'disetujui']);
+    
+    return redirect()->back()->with([
+        'alertType' => 'success',
+        'alertMessage' => 'Alumni berhasil disetujui!'
+    ]);
+}
+
+public function reject(Alumni $alumni)
+{
+    $alumni->update(['status' => 'ditolak']);
+    
+    return redirect()->back()->with([
+        'alertType' => 'success',
+        'alertMessage' => 'Alumni berhasil ditolak!'
+    ]);
+}
 }
