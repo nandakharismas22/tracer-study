@@ -14,7 +14,8 @@ class DashboardController extends Controller
             return view('dashboard.show', compact('alumni'));
         }
 
-        $alumni = Alumni::paginate(10);
+        $alumni = Alumni::latest() 
+        ->paginate(10);
 
         return view('dashboard.index', compact('alumni'));
     }
